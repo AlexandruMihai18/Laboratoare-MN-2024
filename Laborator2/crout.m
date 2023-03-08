@@ -1,7 +1,7 @@
 function [L U] = crout(A)
-  [n n] = size(A)
-  L = zeros(n)
-  U = eye(n)
+  [n n] = size(A);
+  L = zeros(n);
+  U = eye(n);
   L(1:n,1) = A(1:n,1);
   
   for i = 1 : n
@@ -29,7 +29,7 @@ function [L U] = crout(A)
     endfor
   endfor
   
-  display(L)
-  display(U)
+  display(L);
+  display(U);
 
 endfunction

@@ -7,7 +7,7 @@ function [L U] = doolittle(A)
     for j = p : n
       s = 0;
       for k = 1 : p - 1
-        s = s + L(p,k)*U(k,j);
+        s = s + L(p,k) * U(k,j);
       endfor
       U(p,j) = A(p,j) - s;
     endfor
@@ -16,7 +16,7 @@ function [L U] = doolittle(A)
       for k = 1 : p - 1
         s = s + L(i,k) * U(k,p);
       endfor
-      L(i,p) = (A(i,p) - s) / U(p,p)
+      L(i,p) = (A(i,p) - s) / U(p,p);
     endfor
   endfor
   
